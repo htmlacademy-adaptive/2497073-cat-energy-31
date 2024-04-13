@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Николай](https://up.htmlacademy.ru/adaptive/31/user/2497073).
-* Наставник: `Неизвестно`.
+- Студент: [Николай](https://up.htmlacademy.ru/adaptive/31/user/2497073).
+- Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 

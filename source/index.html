@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
@@ -39,7 +43,14 @@
       <div class="container">
         <h1 class="hero__title hero__title--mobile title-all">Функциональное питание для котов</h1>
         <p class="hero__text">Занялся собой? Займись котом!</p>
-        <img class="hero__image" width="280" height="270" src="#" alt="Кэт энерджи со вкусом курицы">
+        <picture>
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png"
+            srcset="images/index-hero-desktop@1x.png 1x, images/index-hero-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="709" height="609" type="image/png"
+            srcset="images/index-hero-tablet@1x.png 1x, images/index-hero-tablet@2x.png 2x">
+          <img class="hero__image" src="images/index-hero-mobile@1x.png" srcset="images/index-hero-mobile@2x.png 2x"
+            width="280" height="270" alt="Кэт энерджи со вкусом курицы">
+        </picture>
         <a class="hero__link button-link" href="#">подобрать программу</a>
       </div>
     </section>
@@ -110,9 +121,21 @@
           <span class="example__price">15 000 РУБ.</span>
         </div>
         <div class="example__image-box">
-          <img src="#" width="280" height="256" alt="Толстый кот до похудения">
-          <img src="#" width="280" height="256" alt="Худой кот после похудения">
-          <button class="example__button button" type="button"></button>
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png"
+              srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+            <img src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280"
+              height="256" alt="Толстый кот до похудения">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" type="image/png"
+              srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+            <img src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280"
+              height="256" alt="Худой кот после похудения">
+          </picture>
+          <button class="example__button button" type="button">
+            <span class="visually-hidden">Тяните вправо или лево</span>
+          </button>
         </div>
       </div>
     </section>
@@ -123,12 +146,20 @@
           <p class="address__slogan">приглашаемк&nbsp;сотрудничеству дилеров!</p>
           <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <div class="address__map">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ed05c912f981210d245836890045d489a55da7327587a92ecac1d307dc25f6b&amp;source=constructor"
-            width="320" height="362">
-          </iframe>
-        </div>
+      </div>
+      <div class="address__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ed05c912f981210d245836890045d489a55da7327587a92ecac1d307dc25f6b&amp;source=constructor"
+          width="320" height="362">
+        </iframe>
+        <picture>
+          <source media="(min-width: 1440px)" width="1440" height="400" type="image/png"
+            srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/png"
+            srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+          <img src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362"
+            alt="Карта офиса по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
       </div>
     </section>
   </main>

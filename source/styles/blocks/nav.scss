@@ -1,0 +1,33 @@
+.nav__list {
+  @include list-reset;
+}
+
+.nav__link {
+  @include link-basic;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    color: $main-light;
+    background-color: $button-basic;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

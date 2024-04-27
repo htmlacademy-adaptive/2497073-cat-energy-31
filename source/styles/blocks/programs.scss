@@ -1,0 +1,65 @@
+.programs__list {
+  @include list-reset;
+}
+
+.programs__title {
+  @include title-basic;
+
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs__description {
+  margin: 0;
+  padding: 0;
+  color: $text-dark;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-dark;
+  }
+}
+
+.programs__link {
+  @include link-basic;
+
+  min-width: 134px;
+  min-height: 24px;
+  display: inline-grid;
+  place-items: center start;
+
+  padding: 4px 57px 4px 0;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 4px 60px 4px 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

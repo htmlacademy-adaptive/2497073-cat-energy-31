@@ -1,0 +1,71 @@
+$border-input: #cdcdcd;
+
+.subscribe__title {
+  @include title-basic;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.subscribe__description {
+  margin: 0;
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.subscribe__input {
+  padding: 13px;
+  font-size: 20px;
+  border: 1px solid $border-input;
+
+  &::placeholder {
+    font-family: $second-font;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $text-dark;
+  }
+
+  &:hover {
+    border: 1px solid $text-dark;
+  }
+}
+
+.subscribe__button {
+  @include button-reset;
+
+  padding: 15px 81px;
+  font-family: $second-font;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $main-light;
+  background-color: $button-basic;
+
+  &:hover {
+    background-color: $button-status;
+  }
+
+  &:active {
+    color: rgb($main-light, 0.3);
+  }
+
+  @media (min-width: 768px) {
+    padding: 15px 70px;
+  }
+}

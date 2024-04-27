@@ -1,7 +1,23 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixin.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/button-link.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/address.scss";
+@import "./blocks/footer.scss";
+
+
+/* CATALOG-BLOCKS */
+@import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
+@import "./blocks/sub-product.scss";
+@import "./blocks/subscribe.scss";

@@ -1,0 +1,37 @@
+.hero__title {
+  @include title-basic;
+
+  text-align: center;
+  color: $main-light;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    color: $main-dark;
+  }
+}
+
+.hero__text {
+  margin: 0;
+  padding: 0;
+  font-family: $second-font;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-light;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    text-transform: uppercase;
+    color: $main-dark;
+  }
+}
+
+.hero__link {
+  @include link-basic;
+
+  color: $main-light;
+}

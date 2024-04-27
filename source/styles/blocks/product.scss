@@ -1,0 +1,95 @@
+$product-title: #222222;
+
+.product__list {
+  @include list-reset;
+}
+
+.product__link {
+  @include link-basic;
+}
+
+.product__title {
+  @include title-basic;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $product-title;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.product__features-text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-dark;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.product__features-number {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-dark;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.product__button {
+  padding: 10px 109px;
+  color: $main-light;
+
+  @media (min-width: 768px) {
+    padding: 10px 94px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 10px 54px;
+    min-width: 169px;
+  }
+}
+
+.product__button--all {
+  padding: 10px 94px;
+  color: $text-dark;
+  background-color: $programs-bg;
+
+  &:hover {
+    color: $text-dark;
+    background-color: $example-bg;
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px 80px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 10px 39px;
+  }
+}
+
+.product__title--color {
+  color: #111111;
+}
+
+.product__subtitle {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-dark;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

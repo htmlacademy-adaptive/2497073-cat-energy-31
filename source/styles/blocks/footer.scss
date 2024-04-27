@@ -1,0 +1,15 @@
+.footer__copyright-link {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-dark;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba($text-dark, 0.6);
+  }
+
+  &:active {
+    color: rgba($text-dark, 0.3);
+  }
+}

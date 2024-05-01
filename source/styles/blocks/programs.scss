@@ -2,14 +2,95 @@
   @include list-reset;
 }
 
+.programs__item {
+  position: relative;
+  background-color: $programs-bg;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $button-basic;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      right: 62px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -8px;
+    width: 68px;
+    height: 53px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 276px;
+      height: 211px;
+      left: auto;
+      right: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 106px;
+      left: -17px;
+    }
+  }
+}
+
+.programs__item--slim::after {
+  background-image: url("../../icons/stack.svg#cat-slim-mobile");
+  background-size: 36px 50px;
+  background-position: center top;
+
+  @media (min-width: $tablet-width) {
+    top: -12px;
+    right: 25px;
+    background-size: 140px 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 70px 97px;
+  }
+}
+
+.programs__item--pro::after {
+  background-image: url("../../icons/stack.svg#cat-pro-mobile");
+  background-size: 67px 28px;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-size: 268px 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 134px 56px;
+    background-position: center;
+  }
+}
+
 .programs__title {
   @include title-basic;
-
+  margin-left: 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
   }
@@ -20,7 +101,7 @@
   padding: 0;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
     color: $main-dark;
@@ -29,6 +110,7 @@
 
 .programs__link {
   @include link-basic;
+  position: relative;
 
   min-width: 134px;
   min-height: 24px;
@@ -39,7 +121,17 @@
   font-size: 16px;
   line-height: 16px;
 
-  @media (min-width: 768px) {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    right: 17px;
+    background-image: url("../../icons/stack.svg#arrow-right");
+  }
+
+
+  @media (min-width: $tablet-width) {
     font-size: 20px;
 
     &:hover {
@@ -49,9 +141,13 @@
     &:active {
       opacity: 0.3;
     }
+
+    &::after {
+      right: 0;
+    }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding: 4px 60px 4px 0;
 
     &:hover {
@@ -61,5 +157,14 @@
     &:active {
       opacity: 0.3;
     }
+
+    &::after {
+      right: 3px;
+    }
   }
+}
+
+.programs__link:hover::after {
+  width: 32px;
+  background-image: url("../../icons/stack.svg#arrow-right-32");
 }

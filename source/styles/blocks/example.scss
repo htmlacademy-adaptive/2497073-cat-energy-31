@@ -1,9 +1,11 @@
+$button-color: #666666;
+
 .example__title {
   @include title-basic;
 
   line-height: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -14,7 +16,7 @@
   line-height: 18px;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -25,7 +27,7 @@
   font-size: 24px;
   line-height: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -36,7 +38,7 @@
   line-height: 12px;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 14px;
   }
@@ -48,7 +50,7 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
   }
 }
@@ -58,7 +60,27 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+}
+
+.example__button {
+  @include button-reset;
+
+  color: $button-color;
+
+  &:hover {
+    color: $button-basic;
+  }
+
+  &:active {
+    color: rgba($button-status, 0.6);
+  }
+}
+
+.example__button-svg {
+  @media (min-width: $tablet-width) {
+    height: 512px;
   }
 }

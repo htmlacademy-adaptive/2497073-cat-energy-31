@@ -6,6 +6,8 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
 @import "./blocks/nav.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/button-link.scss";
@@ -14,6 +16,7 @@
 @import "./blocks/example.scss";
 @import "./blocks/address.scss";
 @import "./blocks/footer.scss";
+@import "./blocks/social.scss";
 
 
 /* CATALOG-BLOCKS */

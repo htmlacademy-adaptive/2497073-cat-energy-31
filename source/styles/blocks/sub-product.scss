@@ -6,12 +6,12 @@ $subtitle-color: #222222;
   font-size: 24px;
   line-height: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
   }
@@ -29,7 +29,7 @@ $subtitle-color: #222222;
   text-transform: uppercase;
   color: $subtitle-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
@@ -40,7 +40,7 @@ $subtitle-color: #222222;
   line-height: 14px;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -50,11 +50,11 @@ $subtitle-color: #222222;
   padding: 10px 109px;
   color: $main-light;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 10px 285px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding: 10px 91px;
   }
 }
@@ -65,4 +65,24 @@ $subtitle-color: #222222;
   line-height: 20px;
   color: $main-light;
   background-color: $button-basic;
+}
+
+.sub-product__promo-box {
+  height: 80px;
+  background-color: $button-basic;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../icons/stack.svg#gift-icon");
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 83px;
+    }
+  }
 }

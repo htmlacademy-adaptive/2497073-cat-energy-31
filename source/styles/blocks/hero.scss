@@ -4,7 +4,7 @@
   text-align: center;
   color: $main-light;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
     text-align: start;
@@ -21,7 +21,7 @@
   text-transform: uppercase;
   color: $main-light;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     text-align: start;

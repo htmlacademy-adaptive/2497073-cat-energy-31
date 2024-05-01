@@ -15,7 +15,7 @@ $product-title: #222222;
   line-height: 20px;
   color: $product-title;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
   }
@@ -26,7 +26,7 @@ $product-title: #222222;
   line-height: 16px;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -38,7 +38,7 @@ $product-title: #222222;
   line-height: 16px;
   color: $text-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -48,13 +48,30 @@ $product-title: #222222;
   padding: 10px 109px;
   color: $main-light;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 10px 94px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding: 10px 54px;
     min-width: 169px;
+  }
+}
+
+.product__wrapper--last {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../icons/stack.svg#plus-icon");
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -68,11 +85,11 @@ $product-title: #222222;
     background-color: $example-bg;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     padding: 10px 80px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     padding: 10px 39px;
   }
 }
@@ -88,7 +105,7 @@ $product-title: #222222;
   color: $text-dark;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 18px;
   }

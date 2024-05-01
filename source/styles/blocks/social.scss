@@ -1,0 +1,36 @@
+$social-color: #666666;
+
+.social {
+  @include list-reset;
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: $social-color;
+
+  &:hover {
+    background-color: $button-basic;
+  }
+
+  &:focus-visible {
+    background-color: $button-basic;
+  }
+
+  &:active {
+    background-color: rgba($button-basic, 0.3);
+  }
+}
+
+.social__link--vk {
+  mask-image: url("../../icons/stack.svg#vk-icon");
+}
+
+.social__link--youtube {
+  mask-image: url("../../icons/stack.svg#youtube-icon");
+}
+
+.social__link--telegram {
+  mask-image: url("../../icons/stack.svg#telegram-icon");
+}

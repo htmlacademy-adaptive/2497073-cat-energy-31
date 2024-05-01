@@ -1,15 +1,46 @@
-.footer__copyright-link {
-  display: block;
-  font-size: 16px;
-  line-height: 20px;
-  color: $text-dark;
-  text-decoration: none;
+$link-svg-color: #666666;
+
+.footer__logo-link {
+  @include link-basic;
 
   &:hover {
-    color: rgba($text-dark, 0.6);
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
   }
 
   &:active {
-    color: rgba($text-dark, 0.3);
+    opacity: 0.6;
   }
+}
+
+.footer__copyright-link {
+  display: block;
+  max-width: 280px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $link-svg-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $button-basic;
+  }
+
+  &:focus-visible {
+    color: $button-basic;
+  }
+
+  &:active {
+    color: rgba($button-basic, 0.3);
+  }
+}
+
+.footer__copyright-text {
+  color: $text-dark;
+}
+
+.footer__copyright-link:active .footer__copyright-text {
+  color: rgba($text-dark, 0.3);
 }

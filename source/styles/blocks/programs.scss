@@ -1,9 +1,34 @@
+.programs__container {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
 .programs__list {
   @include list-reset;
+
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 80px;
+  }
 }
 
 .programs__item {
   position: relative;
+  min-height: 50px;
   background-color: $programs-bg;
 
   &::before {
@@ -49,6 +74,14 @@
       height: 106px;
       left: -17px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 100px;
   }
 }
 
@@ -112,7 +145,7 @@
   @include link-basic;
   position: relative;
 
-  min-width: 134px;
+  max-width: 168px;
   min-height: 24px;
   display: inline-grid;
   place-items: center start;
@@ -124,10 +157,11 @@
   &::after {
     content: "";
     position: absolute;
-    width: 24px;
+    width: 32px;
     height: 12px;
     right: 17px;
     background-image: url("../../icons/stack.svg#arrow-right");
+    transition: all 0.5s ease-in-out;
   }
 
 
@@ -143,20 +177,12 @@
     }
 
     &::after {
-      right: 0;
+      right: 8px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 4px 60px 4px 0;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
 
     &::after {
       right: 3px;

@@ -1,5 +1,17 @@
 $link-svg-color: #666666;
 
+.footer {
+  background-color: $programs-bg;
+}
+
+.footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .footer__logo-link {
   @include link-basic;
 

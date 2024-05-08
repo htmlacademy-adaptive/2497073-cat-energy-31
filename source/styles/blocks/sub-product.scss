@@ -1,5 +1,12 @@
 $subtitle-color: #222222;
 
+.sub-product__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .sub-product__title {
   @include title-basic;
 

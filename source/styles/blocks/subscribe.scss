@@ -1,5 +1,20 @@
 $border-input: #cdcdcd;
 
+.subscribe__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-bottom: 104px;
+  }
+}
+
 .subscribe__title {
   @include title-basic;
 

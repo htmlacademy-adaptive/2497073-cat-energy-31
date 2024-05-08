@@ -1,5 +1,41 @@
 $button-color: #666666;
 
+.example {
+  background-color: $example-bg;
+}
+
+.example__container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: 436px 560px;
+    gap: 224px;
+  }
+}
+
+.example__list-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    width: 366px;
+  }
+}
+
+.example__list {
+  min-width: 280px;
+}
+
 .example__title {
   @include title-basic;
 

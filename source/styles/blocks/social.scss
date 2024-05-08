@@ -8,29 +8,33 @@ $social-color: #666666;
   display: block;
   width: 28px;
   height: 22px;
-  background-color: $social-color;
 
-  &:hover {
-    background-color: $button-basic;
-  }
-
-  &:focus-visible {
-    background-color: $button-basic;
-  }
-
-  &:active {
-    background-color: rgba($button-basic, 0.3);
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: $social-color;
   }
 }
 
-.social__link--vk {
+.social__link--vk::before {
   mask-image: url("../../icons/stack.svg#vk-icon");
 }
 
-.social__link--youtube {
+.social__link--youtube::before {
   mask-image: url("../../icons/stack.svg#youtube-icon");
 }
 
-.social__link--telegram {
+.social__link--telegram::before {
   mask-image: url("../../icons/stack.svg#telegram-icon");
+}
+
+.social__link:hover::before,
+:focus-visible::before {
+  background-color: $button-basic;
+}
+
+.social__link:active::before {
+  background-color: rgba($button-basic, 0.3);
 }

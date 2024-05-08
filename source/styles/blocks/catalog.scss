@@ -1,3 +1,18 @@
+.catalog__container {
+  margin-top: 27px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 188px;
+    margin-bottom: 71px;
+  }
+}
+
 .catalog__title {
   @include title-basic;
 

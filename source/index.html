@@ -14,8 +14,8 @@
 </head>
 
 <body class="page__body">
-  <header class="header header-desktop">
-    <div class="container">
+  <header class="header">
+    <div class="header__container container">
       <a class="header__logo-link" href="#">
         <picture>
           <source media="(min-width: 1440px)" width="70" height="60" type="image/svg+xml"
@@ -47,22 +47,24 @@
   </header>
   <main class="main">
     <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">Функциональное питание для котов</h1>
-        <p class="hero__text">Занялся собой? Займись котом!</p>
-        <picture>
-          <source media="(min-width: 1440px)" width="552" height="499" type="image/png"
-            srcset="images/index-hero-desktop@1x.png 1x, images/index-hero-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="709" height="609" type="image/png"
-            srcset="images/index-hero-tablet@1x.png 1x, images/index-hero-tablet@2x.png 2x">
-          <img class="hero__image" src="images/index-hero-mobile@1x.png" srcset="images/index-hero-mobile@2x.png 2x"
-            width="280" height="270" alt="Кэт энерджи со вкусом курицы">
-        </picture>
-        <a class="hero__link button-link" href="#">подобрать программу</a>
+      <div class="hero__container container">
+        <div class="hero__box">
+          <h1 class="hero__title">Функциональное питание для котов</h1>
+          <p class="hero__text">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1440px)" width="552" height="499" type="image/png"
+              srcset="images/index-hero-desktop@1x.png 1x, images/index-hero-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="709" height="609" type="image/png"
+              srcset="images/index-hero-tablet@1x.png 1x, images/index-hero-tablet@2x.png 2x">
+            <img class="hero__image" src="images/index-hero-mobile@1x.png" srcset="images/index-hero-mobile@2x.png 2x"
+              width="280" height="270" alt="Кэт энерджи со вкусом курицы">
+          </picture>
+          <a class="hero__link button-link" href="#">подобрать программу</a>
+        </div>
       </div>
     </section>
     <section class="programs">
-      <div class="container">
+      <div class="programs__container container">
         <h2 class="visually-hidden">Программы питания для вашего кота</h2>
         <ul class="programs__list">
           <li class="programs__item programs__item--slim">
@@ -81,7 +83,7 @@
       </div>
     </section>
     <section class="advantages">
-      <div class="container">
+      <div class="advantages__container container">
         <h2 class="advantages__title">Как это работает</h2>
         <ol class="advantages__list">
           <li class="advantages__item advantages__item--leaf">
@@ -108,24 +110,29 @@
       </div>
     </section>
     <section class="example">
-      <div class="container">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм
-          на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих
-          привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
-        <dl class="example__list">
-          <div class="example__item">
-            <dt class="example__parameter">5 КГ</dt>
-            <dd class="example__benefits">снижение веса</dd>
+      <div class="example__container container">
+        <div class="example__wrapper">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный
+            корм
+            на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих
+            привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
+          <div class="example__list-box">
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__parameter">5 КГ</dt>
+                <dd class="example__benefits">снижение веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__parameter">60 ДНЕЙ</dt>
+                <dd class="example__benefits">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="example__price-box">
+              <p class="example__price-text">Затраты на питание:</p>
+              <span class="example__price">15 000 РУБ.</span>
+            </div>
           </div>
-          <div class="example__item">
-            <dt class="example__parameter">60 ДНЕЙ</dt>
-            <dd class="example__benefits">затрачено времени</dd>
-          </div>
-        </dl>
-        <div class="example__price-box">
-          <p class="example__price-text">Затраты на питание:</p>
-          <span class="example__price">15 000 РУБ.</span>
         </div>
         <div class="example__image-box">
           <picture>
@@ -150,10 +157,10 @@
       </div>
     </section>
     <section class="address">
-      <div class="container">
+      <div class="address__container container">
         <h2 class="visually-hidden">Адрес магазина Кэт энерджи</h2>
         <div class="address__wrapper">
-          <p class="address__slogan">приглашаемк&nbsp;сотрудничеству дилеров!</p>
+          <p class="address__slogan">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </div>
@@ -174,7 +181,7 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container">
+    <div class="footer__container container">
       <div class="footer__logo-box">
         <a class="footer__logo-link" href="index.html">
           <img class="footer__logo-text" width="128" height="25" src="images/content/logo-text-footer.svg"

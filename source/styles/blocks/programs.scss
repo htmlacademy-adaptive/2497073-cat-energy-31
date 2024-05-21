@@ -27,6 +27,7 @@
 }
 
 .programs__item {
+  padding: 21px 20px 18px;
   position: relative;
   min-height: 50px;
   background-color: $programs-bg;
@@ -43,22 +44,24 @@
     @media (min-width: $tablet-width) {
       width: 200px;
       height: 200px;
-      right: 62px;
+      top: 92px;
+      right: 63px;
     }
 
     @media (min-width: $desktop-width) {
       width: 100px;
       height: 100px;
-      left: 0;
+      top: 47px;
+      left: 50px;
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: -3px;
-    left: -8px;
-    width: 68px;
+    top: 18px;
+    left: 12px;
+    width: 67px;
     height: 53px;
     background-repeat: no-repeat;
 
@@ -78,9 +81,11 @@
 
   @media (min-width: $tablet-width) {
     min-height: 200px;
+    padding: 77px 29px 53px 52px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 47px 61px 55px 52px;
     min-height: 100px;
   }
 }
@@ -91,12 +96,14 @@
   background-position: center top;
 
   @media (min-width: $tablet-width) {
-    top: -12px;
+    top: 80px;
     right: 25px;
     background-size: 140px 194px;
   }
 
   @media (min-width: $desktop-width) {
+    top: 40px;
+    left: 33px;
     background-size: 70px 97px;
   }
 }
@@ -107,10 +114,14 @@
   background-position: center;
 
   @media (min-width: $tablet-width) {
+    top: 90px;
+    right: 23px;
     background-size: 268px 112px;
   }
 
   @media (min-width: $desktop-width) {
+    top: 42px;
+    left: 31px;
     background-size: 134px 56px;
     background-position: center;
   }
@@ -118,33 +129,51 @@
 
 .programs__title {
   @include title-basic;
-  margin-left: 70px;
+
+  margin: 5px 0 29px 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 36px 0 73px 162px;
   }
 }
 
 .programs__description {
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
+  padding-bottom: 23px;
   color: $text-dark;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+    padding: 0;
+    width: 340px;
     font-size: 16px;
     line-height: 24px;
     color: $main-dark;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    width: 100%;
   }
 }
 
 .programs__link {
   @include link-basic;
   position: relative;
-
   max-width: 168px;
   min-height: 24px;
   display: inline-grid;
@@ -157,40 +186,31 @@
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
+    width: 24px;
     height: 12px;
     right: 17px;
     background-image: url("../../icons/stack.svg#arrow-right");
-    transition: all 0.5s ease-in-out;
   }
 
+  &:hover {
+    opacity: 0.6;
+
+    &::after {
+      width: 32px;
+      right: 9px;
+      background-image: url("../../icons/stack.svg#arrow-right-32");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &::after {
-      right: 8px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 4px 60px 4px 0;
-
-    &::after {
-      right: 3px;
-    }
   }
-}
-
-.programs__link:hover::after {
-  width: 32px;
-  background-image: url("../../icons/stack.svg#arrow-right-32");
 }

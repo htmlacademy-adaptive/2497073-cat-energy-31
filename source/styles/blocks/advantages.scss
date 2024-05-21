@@ -15,9 +15,11 @@ $counter-color: #f2f2f2;
 .advantages__title {
   @include title-basic;
 
+  margin-bottom: 40px;
   line-height: 40px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -61,17 +63,36 @@ $counter-color: #f2f2f2;
     @media (min-width: $tablet-width) {
       width: 80px;
       height: 80px;
+      top: 40px;
     }
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 151px;
+    padding-left: 0;
     min-height: 280px;
+
+    &:first-child {
+      width: 230px;
+
+      &::after {
+        content: counter(enumerator);
+        position: absolute;
+        top: 0;
+        right: 8px;
+        font-family: $second-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $counter-color;
+        z-index: -1;
+      }
+    }
 
     &::after {
       content: counter(enumerator);
       position: absolute;
       top: 0;
-      right: 0;
+      right: 2px;
       font-family: $second-font;
       font-size: 280px;
       line-height: 280px;
@@ -104,6 +125,12 @@ $counter-color: #f2f2f2;
 .advantages__description {
   margin: 0;
   color: $text-dark;
+
+  @media (max-width: $mobile-width) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

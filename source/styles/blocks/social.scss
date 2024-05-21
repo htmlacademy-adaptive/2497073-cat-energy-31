@@ -2,6 +2,10 @@ $social-color: #666666;
 
 .social {
   @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
 }
 
 .social__link {

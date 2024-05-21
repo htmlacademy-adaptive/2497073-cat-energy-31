@@ -1,5 +1,9 @@
 $border-input: #cdcdcd;
 
+.subscribe {
+  overflow-x: hidden;
+}
+
 .subscribe__container {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -18,25 +22,86 @@ $border-input: #cdcdcd;
 .subscribe__title {
   @include title-basic;
 
+  margin-bottom: 32px;
   font-size: 24px;
   line-height: 24px;
+  width: fit-content;
+  background-color: $main-light;
+  box-shadow: -40px 0 0 0 $main-light, 40px 0 0 0 $main-light;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-color: $button-basic;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 20px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    top: 12px;
+    left: 50%;
+    z-index: -1;
+    background-color: $button-basic;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 20px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
+    margin-left: 40px;
+    margin-bottom: 66px;
     font-size: 32px;
     line-height: 32px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-bottom: 72px;
     font-size: 40px;
     line-height: 40px;
   }
 }
 
+.subscribe__wrapper {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 632px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+  }
+}
+
 .subscribe__description {
   margin: 0;
+  margin-bottom: 24px;
   font-family: $second-font;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -44,8 +109,16 @@ $border-input: #cdcdcd;
   }
 }
 
+.subscribe__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
 .subscribe__input {
+  margin-bottom: 16px;
   padding: 13px;
+  width: 100%;
   font-size: 20px;
   border: 1px solid $border-input;
 
@@ -59,12 +132,17 @@ $border-input: #cdcdcd;
   &:hover {
     border: 1px solid $text-dark;
   }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .subscribe__button {
   @include button-reset;
 
-  padding: 15px 81px;
+  padding: 15px;
+  width: 100%;
   font-family: $second-font;
   font-size: 20px;
   line-height: 26px;
@@ -81,6 +159,6 @@ $border-input: #cdcdcd;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 15px 70px;
+    flex-shrink: 2;
   }
 }

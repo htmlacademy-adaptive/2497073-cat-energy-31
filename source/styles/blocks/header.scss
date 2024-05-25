@@ -1,5 +1,23 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    &--index {
+      background-image: linear-gradient(90deg, $main-light 50%, rgba($button-basic, 0.85) 50%);
+    }
+  }
+}
+
+.header__container {
+  padding-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    padding-bottom: 29px;
+  }
 }

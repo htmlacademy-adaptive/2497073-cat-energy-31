@@ -1,0 +1,218 @@
+.programs__container {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.programs__list {
+  @include list-reset;
+
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 80px;
+  }
+}
+
+.programs__item {
+  padding: 21px 20px 18px;
+  position: relative;
+  min-height: 50px;
+  background-color: $programs-bg;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $button-basic;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;
+      top: 93px;
+      right: 63px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 50px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 11px;
+    width: 67px;
+    height: 53px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 276px;
+      height: 211px;
+      left: auto;
+      right: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 106px;
+      left: -17px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    padding: 78px 29px 59px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 47px 61px 61px 52px;
+    min-height: 100px;
+  }
+}
+
+.programs__item--slim::after {
+  background-image: url("../../icons/stack.svg#cat-slim-mobile");
+  background-size: 36px 50px;
+  background-position: center top;
+
+  @media (min-width: $tablet-width) {
+    top: 82px;
+    right: 25px;
+    background-size: 140px 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 41px;
+    left: 35px;
+    background-size: 70px 97px;
+  }
+}
+
+.programs__item--pro::after {
+  background-image: url("../../icons/stack.svg#cat-pro-mobile");
+  background-size: 67px 28px;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    top: 86px;
+    right: 24px;
+    background-size: 268px 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 42px;
+    left: 33px;
+    background-size: 134px 56px;
+    background-position: center;
+  }
+}
+
+.programs__title {
+  @include title-basic;
+
+  margin: 8px 0 29px 70px;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 30px 0 73px 162px;
+  }
+}
+
+.programs__description {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  padding-bottom: 23px;
+  color: $text-dark;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    padding: 0;
+    width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-dark;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 31px;
+    width: 100%;
+  }
+}
+
+.programs__link {
+  @include link-basic;
+
+  position: relative;
+  max-width: 168px;
+  min-height: 24px;
+  display: inline-grid;
+  place-items: center start;
+
+  padding: 4px 57px 4px 0;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    right: 7px;
+    background-image: url("../../icons/stack.svg#arrow-right");
+  }
+
+  &:hover {
+    opacity: 0.6;
+
+    &::after {
+      width: 32px;
+      right: -3px;
+      background-image: url("../../icons/stack.svg#arrow-right-32");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 4px 60px 4px 0;
+  }
+}

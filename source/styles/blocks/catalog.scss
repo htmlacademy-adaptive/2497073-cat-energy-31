@@ -1,0 +1,34 @@
+$border-color: #d9d9d9;
+
+.catalog {
+  @media (max-width: $mobile-width) {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.catalog__container {
+  margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
+    margin-bottom: 71px;
+  }
+}
+
+.catalog__title {
+  @include title-basic;
+
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

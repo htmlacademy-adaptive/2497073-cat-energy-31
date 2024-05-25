@@ -1,0 +1,20 @@
+.button-link {
+  min-width: 244px;
+  min-height: 40px;
+  display: inline-grid;
+  place-items: center;
+  text-align: center;
+  font-family: $second-font;
+  font-size: 16px;
+  background-color: $button-basic;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $button-status;
+  }
+
+  &:active {
+    color: rgba($main-light, 0.3);
+  }
+}

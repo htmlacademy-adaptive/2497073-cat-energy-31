@@ -35,18 +35,18 @@ $border-input: #cdcdcd;
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 12px;
+    top: 9px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
     background-color: $button-basic;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 20px;
+      top: 16px;
     }
   }
 
@@ -55,17 +55,17 @@ $border-input: #cdcdcd;
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 12px;
+    top: 9px;
     left: 50%;
     z-index: -1;
     background-color: $button-basic;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop-width) {
-      top: 20px;
+      top: 16px;
     }
   }
 
@@ -118,6 +118,7 @@ $border-input: #cdcdcd;
 .subscribe__input {
   margin-bottom: 16px;
   padding: 13px;
+  padding-top: 17px;
   width: 100%;
   font-size: 20px;
   border: 1px solid $border-input;
@@ -133,8 +134,17 @@ $border-input: #cdcdcd;
     border: 1px solid $text-dark;
   }
 
+  &:not(:placeholder-shown):not(:focus-visible):invalid {
+    border: 2px solid #ff8282;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
+    width: 376px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 496px;
   }
 }
 
@@ -159,6 +169,6 @@ $border-input: #cdcdcd;
   }
 
   @media (min-width: $tablet-width) {
-    flex-shrink: 2;
+    width: 256px;
   }
 }

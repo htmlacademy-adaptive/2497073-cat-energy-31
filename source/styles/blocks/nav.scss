@@ -129,11 +129,12 @@
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
     gap: 15px 33px;
-    width: 436px;
+    width: 440px;
   }
 
   @media (min-width: $desktop-width) {
     width: 600px;
+    gap: 15px 35px;
     justify-content: flex-end;
   }
 }
@@ -161,7 +162,7 @@
       &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: 5px;
         left: 0;
         right: 0;
         height: 2px;
@@ -175,12 +176,6 @@
       position: relative;
 
       &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
         background-color: $main-light;
       }
     }
@@ -210,7 +205,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     font-size: 20px;
     line-height: 30px;
   }

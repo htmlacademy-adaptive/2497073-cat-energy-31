@@ -35,6 +35,7 @@
   &::before {
     content: "";
     position: absolute;
+    top: 23px;
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -44,7 +45,7 @@
     @media (min-width: $tablet-width) {
       width: 200px;
       height: 200px;
-      top: 92px;
+      top: 93px;
       right: 63px;
     }
 
@@ -59,8 +60,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 18px;
-    left: 12px;
+    top: 21px;
+    left: 11px;
     width: 67px;
     height: 53px;
     background-repeat: no-repeat;
@@ -81,11 +82,11 @@
 
   @media (min-width: $tablet-width) {
     min-height: 200px;
-    padding: 77px 29px 53px 52px;
+    padding: 78px 29px 59px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 47px 61px 55px 52px;
+    padding: 47px 61px 61px 52px;
     min-height: 100px;
   }
 }
@@ -96,14 +97,14 @@
   background-position: center top;
 
   @media (min-width: $tablet-width) {
-    top: 80px;
+    top: 82px;
     right: 25px;
     background-size: 140px 194px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 40px;
-    left: 33px;
+    top: 41px;
+    left: 35px;
     background-size: 70px 97px;
   }
 }
@@ -114,14 +115,14 @@
   background-position: center;
 
   @media (min-width: $tablet-width) {
-    top: 90px;
-    right: 23px;
+    top: 86px;
+    right: 24px;
     background-size: 268px 112px;
   }
 
   @media (min-width: $desktop-width) {
     top: 42px;
-    left: 31px;
+    left: 33px;
     background-size: 134px 56px;
     background-position: center;
   }
@@ -130,7 +131,7 @@
 .programs__title {
   @include title-basic;
 
-  margin: 5px 0 29px 70px;
+  margin: 8px 0 29px 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -143,7 +144,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 36px 0 73px 162px;
+    margin: 30px 0 73px 162px;
   }
 }
 
@@ -156,7 +157,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 48px;
+    margin-bottom: 55px;
     padding: 0;
     width: 340px;
     font-size: 16px;
@@ -166,13 +167,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 31px;
     width: 100%;
   }
 }
 
 .programs__link {
   @include link-basic;
+
   position: relative;
   max-width: 168px;
   min-height: 24px;
@@ -188,7 +190,7 @@
     position: absolute;
     width: 24px;
     height: 12px;
-    right: 17px;
+    right: 7px;
     background-image: url("../../icons/stack.svg#arrow-right");
   }
 
@@ -197,7 +199,7 @@
 
     &::after {
       width: 32px;
-      right: 9px;
+      right: -3px;
       background-image: url("../../icons/stack.svg#arrow-right-32");
     }
   }

@@ -22,7 +22,7 @@ $subtitle-color: #222222;
 .sub-product__title {
   @include title-basic;
 
-  margin-bottom: 26px;
+  margin-bottom: 34px;
   width: fit-content;
   font-size: 24px;
   line-height: 24px;
@@ -35,14 +35,14 @@ $subtitle-color: #222222;
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 12px;
+    top: 9px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
     background-color: $button-basic;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop-width) {
@@ -55,13 +55,13 @@ $subtitle-color: #222222;
     position: absolute;
     width: 100vw;
     height: 2px;
-    top: 12px;
+    top: 9px;
     left: 50%;
     z-index: -1;
     background-color: $button-basic;
 
     @media (min-width: $tablet-width) {
-      top: 16px;
+      top: 14px;
     }
 
     @media (min-width: $desktop-width) {
@@ -78,6 +78,7 @@ $subtitle-color: #222222;
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
+    margin-bottom: 82px;
     font-size: 40px;
     line-height: 40px;
   }
@@ -85,10 +86,11 @@ $subtitle-color: #222222;
 
 .sub-product__list {
   @include list-reset;
+
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
     border: 1px solid #cdcdcd;
   }
 
@@ -100,7 +102,7 @@ $subtitle-color: #222222;
 }
 
 .sub-product__item {
-  padding: 13px 0 19px;
+  padding: 12px 0 19px;
   border-top: 1px solid #cdcdcd;
 
   &:last-child {
@@ -115,7 +117,7 @@ $subtitle-color: #222222;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
     flex-wrap: nowrap;
     align-items: center;
   }
@@ -132,7 +134,7 @@ $subtitle-color: #222222;
   color: $subtitle-color;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -148,7 +150,7 @@ $subtitle-color: #222222;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    gap: 49px;
+    gap: 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -185,9 +187,10 @@ $subtitle-color: #222222;
   min-height: 200px;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-mobile@1x.jpg") 1x, url("../../images/catalog-background-mobile@2x.jpg") 2x);
-  background-repeat: no-repeat;
   position: relative;
+  background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/catalog-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/catalog-background-mobile@1x.jpg") 1x, url("../../images/catalog-background-mobile@2x.jpg") 2x);
+  background-repeat: no-repeat;
+  background-color: $button-basic;
 
   &::before {
     content: "";
@@ -205,14 +208,14 @@ $subtitle-color: #222222;
   @media (min-width: $tablet-width) {
     padding: 57px 125px 60px 77px;
     justify-content: flex-start;
-    background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-tablet@1x.jpg") 1x, url("../../images/catalog-background-tablet@2x.jpg") 2x);
+    background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-tablet@1x.webp") type("image/webp") 1x, url("../../images/catalog-background-tablet@2x.webp") type("image/webp") 2x, url("../../images/catalog-background-tablet@1x.jpg") 1x, url("../../images/catalog-background-tablet@2x.jpg") 2x);
   }
 
   @media (min-width: $desktop-width) {
     padding: 56px 42px 43px;
     height: fit-content;
     justify-content: center;
-    background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-desktop@1x.jpg") 1x, url("../../images/catalog-background-desktop@2x.jpg") 2x);
+    background-image: linear-gradient(rgba($button-basic, 0.85), rgba($button-basic, 0.85)), image-set(url("../../images/catalog-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/catalog-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/catalog-background-desktop@1x.jpg") 1x, url("../../images/catalog-background-desktop@2x.jpg") 2x);
   }
 }
 

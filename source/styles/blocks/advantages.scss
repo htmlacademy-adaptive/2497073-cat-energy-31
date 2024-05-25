@@ -4,7 +4,7 @@ $counter-color: #f2f2f2;
   margin-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 92px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,10 +27,10 @@ $counter-color: #f2f2f2;
 
 .advantages__list {
   @include list-reset;
-  counter-reset: enumerator 0;
 
   display: grid;
   gap: 20px;
+  counter-reset: enumerator 0;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 250px);
@@ -52,7 +52,7 @@ $counter-color: #f2f2f2;
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -110,16 +110,28 @@ $counter-color: #f2f2f2;
 .advantages__item--water::before {
   background-image: url("../../icons/stack.svg#water-icon");
   background-size: 27px 29px;
+
+  @media (min-width: $desktop-width) {
+    left: 2px;
+  }
 }
 
 .advantages__item--eat::before {
   background-image: url("../../icons/stack.svg#eat-icon");
   background-size: 25px 30px;
+
+  @media (min-width: $desktop-width) {
+    left: 3px;
+  }
 }
 
 .advantages__item--clock::before {
   background-image: url("../../icons/stack.svg#clock-icon");
   background-size: 27px 31px;
+
+  @media (min-width: $desktop-width) {
+    left: 5px;
+  }
 }
 
 .advantages__description {

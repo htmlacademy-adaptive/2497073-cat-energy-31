@@ -47,20 +47,26 @@ $link-svg-color: #666666;
 }
 
 .footer__social {
-  padding: 20px 74px;
+  padding: 19px 74px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
+    margin-left: 160px;
+    margin-right: auto;
     padding: 0;
-    width: 185px;
+    width: 132px;
     justify-content: center;
     border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 416px;
   }
 }
 
 .footer__copyright {
-  padding: 20px 0;
+  padding: 19px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;

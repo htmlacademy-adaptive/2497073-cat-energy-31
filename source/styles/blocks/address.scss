@@ -69,6 +69,7 @@ $address-slogan: #111111;
   }
 
   @media (min-width: $desktop-width) {
+    width: 157px;
     text-align: start;
     align-items: flex-start;
   }
@@ -96,7 +97,7 @@ $address-slogan: #111111;
 }
 
 .address__img {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: calc(50% - 160px);
@@ -111,6 +112,7 @@ $address-slogan: #111111;
   }
 }
 
-.address__map--nojs .address__img--catalog {
-  z-index: 2;
+.address__map--nojs .address__img {
+  display: block;
+  z-index: 1;
 }

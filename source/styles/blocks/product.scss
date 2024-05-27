@@ -123,11 +123,6 @@ $border-mobile: #ebebeb;
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
   }
 }
 

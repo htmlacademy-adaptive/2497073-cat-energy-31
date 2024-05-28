@@ -33,6 +33,7 @@ $address-slogan: #111111;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
+    gap: 12px;
   }
 }
 
